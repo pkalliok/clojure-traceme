@@ -12,6 +12,7 @@
   "Start tracing all namespaces in this project (that is, that don't come from dependencies)."
   []
   (doseq [the-ns (project-namespaces)]
+    (println "Tracing namespace:" the-ns)
     (require the-ns)
     (trace-ns the-ns)))
 
